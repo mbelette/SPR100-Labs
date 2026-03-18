@@ -46,9 +46,9 @@ denied
 
 6.) (response to: getfacl secret.txt) 
 
-# file: secret.txt
-# owner: mbelette
-# group: mbelette
+#file: secret.txt
+#owner: mbelette
+#group: mbelette
 User: : rw-
 User: fsuser:r - -
 Group:: - - -

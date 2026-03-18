@@ -30,10 +30,10 @@ drwxrwxr-x 3 mbelette mbelette 4096 Mar 17 22:40 ..
 drwxr-x--- 3 mbelette mbelette 4096 Mar 17 22:40 projects
 -rw------- 1 mbelette mbelette   46 Mar 17 22:40 secret.txt
 
-(response to: chmod 600 secret.txt # Only YOU can read/write chmod 644 notes.txt # You read/write; others only read chmod 750 projects # You have full access; group can enter chmod 750 projects/teamA # Locked down for traversal ls -la)
+(this was a response to: chmod 600 secret.txt # Only YOU can read/write chmod 644 notes.txt # You read/write; others only read chmod 750 projects # You have full access; group can enter chmod 750 projects/teamA # Locked down for traversal ls -la)
 
 
-4.) (response to: Sudo -u fsuser bash -c ‘cat /home/mbelette/SPR100_Labs/Lab04/work/secret.txt || echo “denied”)  
+4.) (this was a response to: Sudo -u fsuser bash -c ‘cat /home/mbelette/SPR100_Labs/Lab04/work/secret.txt || echo “denied”)  
 
 Cat: /home/mbelette/SPR100_Labs/Lab04/work/secret.txt: Permission denied 
 denied
@@ -42,9 +42,9 @@ denied
 
 
 
-5.) (response to: setfacl -m u:fsuser:r-- secret.txt) 
+5.) (this was a response to: setfacl -m u:fsuser:r-- secret.txt) 
 
-6.) (response to: getfacl secret.txt) 
+6.) (this was a response to: getfacl secret.txt) 
 
 #file: secret.txt
 #owner: mbelette
@@ -59,7 +59,7 @@ Other: : - - -
 
 
 
-7.) (response to: sudo -u fsuser bash -c 'cat /home/mbelette/SPR100_Labs/Lab04/work/secret.txt && echo OK') 
+7.) (this was a response to: sudo -u fsuser bash -c 'cat /home/mbelette/SPR100_Labs/Lab04/work/secret.txt && echo OK') 
 
 
 
@@ -67,16 +67,16 @@ Cat: /home/mbelette/SPR100_Labs/Lab04/work/secret.txt: Permission denied
 
 
 
-8.) (response to: sudo -u fsuser bash -c 'echo "hacked" >> /home/mbelette/SPR100_Labs/Lab04/work/secret.txt || echo "write denied"') 
+8.) (this was a response to: sudo -u fsuser bash -c 'echo "hacked" >> /home/mbelette/SPR100_Labs/Lab04/work/secret.txt || echo "write denied"') 
 
 Bash: line 1: /home/mbelette/SPR100_Labs/Lab04/work/secret.txt: Permission denied write denied
 
 
 
-9.) (response to: chmod 751 /home/mbelette/SPR100_Labs/Lab04/work
+9.) (this was a response to: chmod 751 /home/mbelette/SPR100_Labs/Lab04/work
 setfacl -m u:fsuser:x /home/mbelette)
 
-10.) response to: sudo -u fsuser cat /home/mbelette/SPR100_Labs/Lab04/work/secret.txt && echo "SUCCESS": 
+10.) this was a response to: sudo -u fsuser cat /home/mbelette/SPR100_Labs/Lab04/work/secret.txt && echo "SUCCESS": 
 
 
 confidential : Tue 17 Mar 2026 10:40:07 PM EDT SUCCESS
@@ -84,7 +84,7 @@ confidential : Tue 17 Mar 2026 10:40:07 PM EDT SUCCESS
 
 
 
-11.) response to: zip -r secure_bundle.zip projects
+11.) this was a response to: zip -r secure_bundle.zip projects
 openssl enc -aes-256-cbc -salt -in secure_bundle.zip -out secure_bundle.zip.enc
 
 Opsnssl enc -aes-256-cbc -salt  -in secure_ 
@@ -94,14 +94,14 @@ Adding: projects/teamA/ (stored 0%)
 Enter AES-256-CBC encryption password: (i proceeded to put in my password) 
 
 
-12.) (response to:  shred -u secure_bundle.zip)
+12.) (there was no response to:  shred -u secure_bundle.zip)
 
 
 
-13.) response to: setfattr -n user.note -v "confidential" notes.txt
+13.) there was no response to: setfattr -n user.note -v "confidential" notes.txt
 getfattr -d notes.txt
 
-14.) response to (zip -r secure_bundle.zip projects): 
+14.) this was a response to (zip -r secure_bundle.zip projects): 
 
 Adding: projects/ (stored 0%)
 Adding: projects/teamA/ (stored 0%) 
@@ -110,7 +110,7 @@ Adding: projects/teamA/ (stored 0%)
 
 
 
-15.) (response to openssl enc -aes-256-cbc -salt -in secure_bundle.zip -out secure_bundle.zip.enc) 
+15.) (this was a response to openssl enc -aes-256-cbc -salt -in secure_bundle.zip -out secure_bundle.zip.enc) 
 
 Enter AES-256-CBC encryption password: 
 Verifying - enter AES-256-CBC encryption password: 
@@ -119,7 +119,7 @@ Verifying - enter AES-256-CBC encryption password:
 
 Using -iter or -pbkdf2 would be better.
 
-16.) (response to: shred -u secure_bundle.zip
+16.) (this was a response to: shred -u secure_bundle.zip
 ls -l secure_bundle.zip.enc) 
 
 -rw-rw-r - - 1 mbelette mbelette 352 Mar 17 23:08 secure_bundle.zip.enc
